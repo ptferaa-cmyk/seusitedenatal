@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Um Presente Especial Para Você</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div id="loading" class="loading-overlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Carregando seu momento especial...</p>
+        </div>
+    </div>
+
+    <div id="error" class="error-container hidden">
+        <div class="error-content">
+            <h2>Ops! Site não encontrado</h2>
+            <p>O link que você acessou não existe ou foi removido.</p>
+        </div>
+    </div>
+
+    <div id="content" class="hidden">
+        <div class="page-wrapper">
+            <!-- Header com título -->
+            <header class="header-section">
+                <div class="header-content">
+                    <h1 id="title" class="main-title"></h1>
+                    <div class="header-decoration"></div>
+                </div>
+            </header>
+
+            <!-- Carrossel de fotos -->
+            <section class="carousel-section">
+                <div class="carousel-wrapper">
+                    <div class="carousel-container">
+                        <div id="carousel" class="carousel-track"></div>
+                    </div>
+                    <button id="prevBtn" class="carousel-nav carousel-nav-prev" aria-label="Foto anterior">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button id="nextBtn" class="carousel-nav carousel-nav-next" aria-label="Próxima foto">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                    <div id="indicators" class="carousel-indicators"></div>
+                </div>
+            </section>
+
+            <!-- Contador de tempo -->
+            <section class="counter-section">
+                <div class="counter-wrapper">
+                    <h2 class="section-title">Nosso Tempo Juntos</h2>
+                    <div id="counter" class="counter-display"></div>
+                </div>
+            </section>
+
+            <!-- Mensagem principal -->
+            <section class="message-section">
+                <div class="message-wrapper">
+                    <div class="message-card">
+                        <div class="message-header">
+                            <h2>Uma Mensagem Especial</h2>
+                            <div class="message-decoration-top"></div>
+                        </div>
+                        <div id="mainMessage" class="message-content"></div>
+                        <p id="signature" class="message-signature"></p>
+                        <div class="message-decoration-bottom"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Momentos que marcaram -->
+            <section id="momentsSection" class="moments-section hidden">
+                <div class="moments-wrapper">
+                    <h2 class="section-title">Momentos que Marcaram</h2>
+                    <div id="moments" class="moments-grid"></div>
+                </div>
+            </section>
+
+            <!-- Mensagem final -->
+            <section id="finalMessageSection" class="final-message-section hidden">
+                <div class="final-message-wrapper">
+                    <div class="final-message-card">
+                        <h2>Mensagem Final</h2>
+                        <p id="finalMessage"></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Player de música -->
+            <div id="musicPlayer" class="music-player hidden">
+                <button id="playPauseBtn" class="music-button" aria-label="Reproduzir música">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                </button>
+                <span id="musicLabel" class="music-label">Tocar música</span>
+            </div>
+
+            <audio id="audioPlayer" style="display: none;"></audio>
+
+            <!-- Footer -->
+            <footer class="footer-section">
+                <p class="footer-text">Um presente digital feito com amor</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
